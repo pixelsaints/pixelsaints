@@ -1022,7 +1022,7 @@ a:focus {
 /*------------------------------------------------------------------*/
 /*	09) Boxed List
 /*------------------------------------------------------------------*/
-.resumo_fn_boxed_list ul {
+.resumo_fn_boxed_list>ul {
 	list-style-type: none;
 	margin: 0;
 	padding: 0;
@@ -1032,7 +1032,6 @@ a:focus {
 	margin: 0;
 	padding: 0;
 	width: 100%;
-	float: left;
 	clear: both;
 	margin-bottom: 20px;
 }
@@ -1043,7 +1042,6 @@ a:focus {
 
 .resumo_fn_boxed_list .item {
 	width: 100%;
-	float: left;
 	clear: both;
 	background-color: #181715;
 	position: relative;
@@ -1096,7 +1094,7 @@ a:focus {
 	margin: 0;
 	padding: 0;
 	font-weight: 400;
-	margin-bottom: 17px;
+	margin-bottom: 24px;
 }
 
 .resumo_fn_boxed_list p a {
@@ -1105,6 +1103,21 @@ a:focus {
 	z-index: 2;
 	color: #000;
 	font-weight: 600;
+}
+
+.resumo_fn_boxed_list ul .item ul {
+	list-style: square;
+	margin: 0 0 0 20px;
+	display: block;
+	width: 100%;
+}
+
+.resumo_fn_boxed_list ul .item ul li {
+	margin-bottom: 20px;
+}
+
+.resumo_fn_boxed_list ul .item ul li:last-child {
+	margin-bottom: 0;
 }
 
 /*------------------------------------------------------------------*/
@@ -2067,8 +2080,8 @@ a:focus {
 
 .resumo_fn_contact {
 	width: 100%;
-	float: left;
 	clear: both;
+	float: none !important;
 }
 
 .resumo_fn_contact .input_wrapper {
@@ -2196,9 +2209,9 @@ a:focus {
 /*------------------------------------------------------------------*/
 /*	19) Contact Information
 /*------------------------------------------------------------------*/
-.resumo_fn_contact_info {
+/* .resumo_fn_contact_info {
 	padding: 95px 0 0;
-}
+} */
 
 .resumo_fn_contact_info p {
 	margin: 0;
@@ -2223,10 +2236,6 @@ a:focus {
 .resumo_fn_contact_info .fn__link {
 	text-transform: none;
 	font-size: 18px;
-}
-
-.resumo_fn_contact_info *:last-child {
-	margin-bottom: 0;
 }
 
 .fn__link {
@@ -3636,4 +3645,57 @@ body.light .resumo_fn_modalbox .modal_content::-webkit-scrollbar-thumb {
 
 .resumo_fn_modalbox .modal_in {
 	background: #fff;
+}
+
+.social {
+	margin: 45px 0 0;
+}
+
+.social li {
+	margin: 0 10px 10px 0;
+}
+
+.social ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	-webkit-flex-direction: row;
+	-moz-flex-direction: row;
+	-ms-flex-direction: row;
+	-o-flex-direction: row;
+	flex-direction: row;
+	-ms-align-items: center;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.social a {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	-ms-align-items: center;
+	align-items: center;
+	justify-content: center;
+	color: #888;
+	width: 40px;
+	height: 40px;
+	background-color: rgba(255, 255, 255, .05);
+	transition: all 300ms ease;
+}
+
+.social .fn__svg {
+	width: 18px;
+	height: 18px;
+	display: block;
+}
+
+.social a:hover {
+	background-color: rgba(255, 255, 255, .1);
 }
